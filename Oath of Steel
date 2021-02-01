@@ -16,9 +16,9 @@ var iFileName = "Paladin - Oath of Steel.js";
 RequiredSheetVersion(13);
 
 // Define the source
-SourceList["LH:S"] = {
-	name : "Luck Homebrew: Oath of Steel",
-	abbreviation : "LH:OoS",
+SourceList["HB:LOoS"] = {
+	name : "Homebrew: Luck Oath of Steel",
+	abbreviation : "HB:LOoS",
 	group : "Luck Homebrew",
 	url : "none",
 	date : "2021/02/01",
@@ -27,11 +27,11 @@ SourceList["LH:S"] = {
 AddSubClass("paladin", "oath of steel", {
 	regExpSearch : /oathofsteel/i,
 	subname : "Oath Of Steel",
-	source : ["LH:OoS", 1],
+	source : ["HB:LOoS", 1],
 	features : {
 		"subclassfeature3" : {
 			name : "Channel Divinity: Iron Guard",
-			source : ["LH:OoS", 1],
+			source : ["HB:LOoS", 1],
 			minlevel : 3,
 			description : desc([
 				"when you take bludgeoning, piercing or slashing damage, you can use your channel divinity as a reaction to reduce your damage by 1d10 plus your paladin level"
@@ -41,7 +41,7 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature3.1" : {
 			name : "Channel Divinity: Guided Strike",
-			source : ["LH:OoS", 1],
+			source : ["HB:LOoS", 1],
 			minlevel : 3,
 			description : desc([
 				"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll.",
@@ -51,7 +51,7 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature3.2" : {
 			name : "Steel Tender",
-			source : ["LH:OoS", 1],
+			source : ["HB:LOoS", 1],
 			minlevel : 3,
 			description : desc([
 				"When you take this Oath, you learn to apply your healing to metals as well, Your lay on hands affect can affect Constructs",
@@ -61,7 +61,7 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature7" : {
 			name : "Aura of Steel",
-			source : ["LH:OoS", 1],
+			source : ["HB:LOoS", 1],
 			minlevel : 7,
 			description : desc([
 				"Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious",
@@ -73,6 +73,7 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature15" : {
 			name : "The Best Defense",
+      source : ["HB:LOoS", 1],
 			minlevel : 15,
 			description : desc([
 				"Starting at 15th level you learn to transiton from your defensive guard to offensive strikes.",
@@ -82,7 +83,7 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature20" : {
 			name : "Saint of Steel",
-			source : ["LH:OoS", 1],
+			source : ["HB:LOoS", 1],
 			minlevel : 20,
 			description : desc([
 				"at 20th level, you learn to merge with your weapon, and gain these benefits:",
