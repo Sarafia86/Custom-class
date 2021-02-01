@@ -18,73 +18,90 @@ RequiredSheetVersion(13);
 // Define the source
 SourceList["LH:S"] = {
 	name : "Luck Homebrew: Oath of Steel",
-	abbreviation : "LH:S",
-	group : "D&D Beyond",
+	abbreviation : "LH:OoS",
+	group : "Luck Homebrew",
 	url : "none"
 	date : "2021/02/01"
 };
 
-AddSubClass("paladin", "common", {
-	regExpSearch : /^(?=.*common)(((?=.*paladin)|((?=.*(exalted|sacred|holy|divine))(?=.*(knight|fighter|warrior|warlord|trooper))))).*$/i,
-	subname : "Oath of Steel",
-	source : ["LH:S", 0],
-	spellcastingExtra : ["longstrider", "zephyr strike", "magic weapon", "spiritual weapon", "conjure barrage", "elemental weapon", "fabricate", "leomond's secret chest", "conjure volley", "steel wind strike"],
+AddSubClass("paladin", "oath of the open seas", {
+	regExpSearch : /^(((?=.*(sea|pirate|swashbuckler))((?=.*paladin)|((?=.*(exalted|sacred|holy|divine))(?=.*(knight|fighter|warrior|warlord|trooper)))))|((?=.*(sea|pirate|swashbuckler))(?=.*(knight|fighter|warrior|warlord|trooper)))).*$/i,
+	subname : "Oath of the Steel",
+	source : ["LH:OoS", 1],
 	features : {
 		"subclassfeature3" : {
 			name : "Channel Divinity: Iron Guard",
-			source : ["LH:S", 0],
+			source : ["LH:OoS", 1],
 			minlevel : 3,
 			description : desc([
 				"when you take bludgeoning, piercing or slashing damage, you can use your channel divinity as a reaction to reduce your damage by 1d10 plus your paladin level"
 			]),
-			action : ["reaction", ""]
+			action : ["reaction", ""],
+			spellcastingExtra : ["longstrider", "zephyr strike", "magic weapon", "spiritual weapon", "conjure barrage", "elemental weapon", "fabricate", "leomond's secret chest", "conjure volley", "steel wind strike"]
 		},
 		"subclassfeature3.1" : {
 			name : "Channel Divinity: Guided Strike",
-			source : ["LH:S", 0],
+			source : ["LH:OoS", 1],
 			minlevel : 3,
 			description : desc([
-				"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll. You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
+				"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll."
+				"You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
 			]),
 			action : ["action", ""]
 		},
-    "subclassfeature3.2" : {
+		"subclassfeature3.2" : {
 			name : "Steel Tender",
-			source : ["LH:S", 0],
+			source : ["LH:OoS", 1],
 			minlevel : 3,
 			description : desc([
 				"When you take this Oath, you learn to apply your healing to metals as well, Your lay on hands affect can affect Constructs"
        				 " - You may use 5 points of lay on hands to cast Mending"
 			]),
+			action : ["action", ""]
 		},
 		"subclassfeature7" : {
 			name : "Aura of Steel",
-			source : ["LH:S", 0],
+			source : ["LH:OoS", 1],
 			minlevel : 7,
 			description : desc([
-				"Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious"
+				""Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious"
         			"at 18th level the range of this aura is increased to 30 feet"
 			]),
+			additional : levels.map( function(n) {
+				return (n < 7 ? "" : (n < 18 ? "10-foot aura" : "30-foot aura"));
+			})
 		},
 		"subclassfeature15" : {
-			name : "The Best Defence",
-			source : ["LH:S", 0],
+			name : "Stormy Waters",
+			source : ["LH:OoS", 1],
 			minlevel : 15,
 			description : desc([
-				"starting at 15th level you learn to transition from your defensive guard to an offensive strike. when you use your Iron Guard, you can also make a single melee weapon attack at the creature that attacked you if its within your reach."
+				"Starting at 15th level you learn to transiton from your defensive guard to offensive strikes.",
+				"When you use your iron guard you make a single melee weapon attack against the creature that attacked if its within your reach"
 			]),
-			action : ["Reaction", ""]
+			action : ["reaction", ""]
 		},
 		"subclassfeature20" : {
-			name : "Strength of the People",
-			source : ["LH:S", 0],
+			name : "Mythic Swashbuckler",
+			source : ["MM:OotOS", 1],
 			minlevel : 20,
 			description : desc([
-				"at 20th level, you learn to merge with your weapon, and gain these benefits:",
+				""at 20th level, you learn to merge with your weapon, and gain these benefits:",
 				" - You Cannot be Disarmed",
 				" - You can add your Charisma modifier to your Armour Class"
        				" - When you take the Attack action on your turn, You can take an Attack action as a Bonus Action"
 			]),
+			toNotesPage : [{
+				name : "Mythic Swashbuckler Benefits",
+				popupName : "Oath of the Open Seas: Mythic Swashbuckler",
+				page3notes : true,
+				note : [
+					" \u2022 Climbing costs no additional movement; I have adv. on Strength (Athletics) checks",
+					" \u2022 My attacks have advantage against a creature within 5 ft if no one else within 5 ft of me",
+					" \u2022 I can take the Dodge action as a bonus action",
+					" \u2022 I have advantage on Dexterity checks and Dexterity saves against seen effects"
+				]
+			}],
 			recovery : "long rest",
 			usages : 1,
 			action : ["action", ""]
