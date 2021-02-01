@@ -1,16 +1,16 @@
-//*	-WHAT IS THIS?-
+/*	-WHAT IS THIS?-
 	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
 	Import this file using the "Add Extra Materials" bookmark.
 	-KEEP IN MIND-
 	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
-*//
+*/
 
-//*	-INFORMATION-
+/*	-INFORMATION-
 	Subject:	Subclass
 	Effect:		This script adds a subclass for the Paladin, called "Oath of Steel"
 	Code by:	Sarafia
 	Date:		2021-02-01
-*//
+*/
 
 var iFileName = "Paladin - Oath of Steel.js";
 RequiredSheetVersion(13);
@@ -64,7 +64,7 @@ AddSubClass("paladin", "oath of steel", {
 			source : ["LH:OoS", 1],
 			minlevel : 7,
 			description : desc([
-				""Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious"
+				"Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious"
         			"at 18th level the range of this aura is increased to 30 feet"
 			]),
 			additional : levels.map( function(n) {
@@ -86,7 +86,7 @@ AddSubClass("paladin", "oath of steel", {
 			source : ["LH:OoS", 1],
 			minlevel : 20,
 			description : desc([
-				""at 20th level, you learn to merge with your weapon, and gain these benefits:",
+				"at 20th level, you learn to merge with your weapon, and gain these benefits:",
 				" - You Cannot be Disarmed",
 				" - You can add your Charisma modifier to your Armour Class"
        				" - When you take the Attack action on your turn, You can take an Attack action as a Bonus Action"
