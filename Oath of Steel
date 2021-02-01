@@ -19,7 +19,7 @@ RequiredSheetVersion(13);
 SourceList["HB:LOoS"] = {
 	name : "Homebrew: Luck Oath of Steel",
 	abbreviation : "HB:LOoS",
-	group : "Luck Homebrew",
+	group : "Homebrew",
 	url : "none",
 	date : "2021/02/01",
 };
