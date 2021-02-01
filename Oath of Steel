@@ -19,14 +19,14 @@ RequiredSheetVersion(13);
 SourceList["HB:LOoS"] = {
 	name : "Homebrew: Luck Oath of Steel",
 	abbreviation : "HB:LOoS",
-	group : "Homebrew",
+	group : "Luck Homebrew",
 	url : "none",
 	date : "2021/02/01",
 };
 
 AddSubClass("paladin", "oath of steel", {
-	regExpSearch : /oathofsteel/i,
-	subname : "Oath Of Steel",
+	regExpSearch : /^(((?=.*(steel))((?=.*paladin)|((?=.*(exalted|sacred|holy|divine))(?=.*(knight|fighter|warrior|warlord|trooper)))))|((?=.*(steel))(?=.*(knight|fighter|warrior|warlord|trooper)))).*$/i,
+	subname : "Oath of Steel",
 	source : ["HB:LOoS", 1],
 	features : {
 		"subclassfeature3" : {
@@ -37,7 +37,7 @@ AddSubClass("paladin", "oath of steel", {
 				"when you take bludgeoning, piercing or slashing damage, you can use your channel divinity as a reaction to reduce your damage by 1d10 plus your paladin level"
 			]),
 			action : ["reaction", ""],
-			spellcastingExtra : ["longstrider, zephyr strike", "magic weapon, spiritual weapon", "conjure barrage, elemental weapon", "fabricate, leomond's secret chest", "conjure volley, steel wind strike"]
+			spellcastingExtra : ["longstrider", "zephyr strike", "magic weapon", "spiritual weapon", "conjure barrage", "elemental weapon", "fabricate", "leomond's secret chest", "conjure volley", "steel wind strike"]
 		},
 		"subclassfeature3.1" : {
 			name : "Channel Divinity: Guided Strike",
