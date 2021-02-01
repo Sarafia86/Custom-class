@@ -1,7 +1,6 @@
 /*	-WHAT IS THIS?-
 	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
 	Import this file using the "Add Extra Materials" bookmark.
-
 	-KEEP IN MIND-
 	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
 */
@@ -10,18 +9,19 @@
 	Subject:	Subclass
 	Effect:		This script adds a subclass for the Paladin, called "Oath of Steel"
 	Code by:	Sarafia
-	Date:		2021 - 02 - 01 (sheet v13.0.4)
-
-
+	Date:		2021-02-01
 */
 
-var iFileName = "Paladin - Oath of Steel,";
-RequiredSheetVersion(12.999);
+var iFileName = "Paladin - Oath of Steel.js";
+RequiredSheetVersion(13);
 
+// Define the source
 SourceList["LH:S"] = {
-	name : "Luck Homebrew Oath of steel",
+	name : "Luck Homebrew: Oath of Steel",
 	abbreviation : "LH:S",
-	group : "luck Homebrew",
+	group : "D&D Beyond",
+	url : "none"
+	date : "2021/02/01"
 };
 
 AddSubClass("paladin", "common", {
