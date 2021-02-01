@@ -19,7 +19,7 @@ var iFileName = "Paladin - Oath of Steel,";
 RequiredSheetVersion(12.999);
 
 SourceList["LH:S"] = {
-	name : "Luck Homebrew Oath of steal",
+	name : "Luck Homebrew Oath of steel",
 	abbreviation : "LH:S",
 	group : "luck Homebrew",
 };
@@ -54,9 +54,8 @@ AddSubClass("paladin", "common", {
 			minlevel : 3,
 			description : desc([
 				"When you take this Oath, you learn to apply your healing to metals as well, Your lay on hands affect can affect Constructs"
-        " - You may use 5 points of lay on hands to cast Mending"
+       				 " - You may use 5 points of lay on hands to cast Mending"
 			]),
-			action : ["action", ""]
 		},
 		"subclassfeature7" : {
 			name : "Aura of Steel",
@@ -64,7 +63,7 @@ AddSubClass("paladin", "common", {
 			minlevel : 7,
 			description : desc([
 				"Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious"
-        "at 18th level the range of this aura is increased to 30 feet"
+        			"at 18th level the range of this aura is increased to 30 feet"
 			]),
 		},
 		"subclassfeature15" : {
@@ -84,7 +83,7 @@ AddSubClass("paladin", "common", {
 				"at 20th level, you learn to merge with your weapon, and gain these benefits:",
 				" - You Cannot be Disarmed",
 				" - You can add your Charisma modifier to your Armour Class"
-        " - When you take the Attack action on your turn, You can take an Attack action as a Bonus Action"
+       				" - When you take the Attack action on your turn, You can take an Attack action as a Bonus Action"
 			]),
 			recovery : "long rest",
 			usages : 1,
