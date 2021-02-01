@@ -83,7 +83,7 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature20" : {
 			name : "Saint of Steel",
-			source : ["MM:OotOS", 1],
+			source : ["LH:OoS", 1],
 			minlevel : 20,
 			description : desc([
 				""at 20th level, you learn to merge with your weapon, and gain these benefits:",
