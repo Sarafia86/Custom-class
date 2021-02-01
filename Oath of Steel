@@ -26,7 +26,7 @@ SourceList["LH:S"] = {
 
 AddSubClass("paladin", "oath of steel", {
 	regExpSearch : /^(((?=.*(sea|pirate|swashbuckler))((?=.*paladin)|((?=.*(exalted|sacred|holy|divine))(?=.*(knight|fighter|warrior|warlord|trooper)))))|((?=.*(sea|pirate|swashbuckler))(?=.*(knight|fighter|warrior|warlord|trooper)))).*$/i,
-	subname : "Oath of the Steel",
+	subname : "Oath Of Steel",
 	source : ["LH:OoS", 1],
 	features : {
 		"subclassfeature3" : {
