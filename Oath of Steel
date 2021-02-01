@@ -20,8 +20,8 @@ SourceList["LH:S"] = {
 	name : "Luck Homebrew: Oath of Steel",
 	abbreviation : "LH:OoS",
 	group : "Luck Homebrew",
-	url : "none"
-	date : "2021/02/01"
+	url : "none",
+	date : "2021/02/01",
 };
 
 AddSubClass("paladin", "oath of steel", {
@@ -44,7 +44,7 @@ AddSubClass("paladin", "oath of steel", {
 			source : ["LH:OoS", 1],
 			minlevel : 3,
 			description : desc([
-				"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll."
+				"You can use your Channel Divinity to strike with supernatural accuracy. When you make an attack roll, you can use your Channel Divinity to gain a +10 bonus to the roll.",
 				"You make this choice after you see the roll, but before the DM says whether the attack hits or misses."
 			]),
 			action : ["action", ""]
@@ -54,7 +54,7 @@ AddSubClass("paladin", "oath of steel", {
 			source : ["LH:OoS", 1],
 			minlevel : 3,
 			description : desc([
-				"When you take this Oath, you learn to apply your healing to metals as well, Your lay on hands affect can affect Constructs"
+				"When you take this Oath, you learn to apply your healing to metals as well, Your lay on hands affect can affect Constructs",
        				 " - You may use 5 points of lay on hands to cast Mending"
 			]),
 			action : ["action", ""]
@@ -64,7 +64,7 @@ AddSubClass("paladin", "oath of steel", {
 			source : ["LH:OoS", 1],
 			minlevel : 7,
 			description : desc([
-				"Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious"
+				"Starting at 7th level, Bludgeoning, Piercing and Slashing damage that you and friendly creatures within 10 feet of you take from non magical weapons is reduced by an amount equal to your Charisma modifier while you are still conscious",
         			"at 18th level the range of this aura is increased to 30 feet"
 			]),
 			additional : levels.map( function(n) {
@@ -73,7 +73,6 @@ AddSubClass("paladin", "oath of steel", {
 		},
 		"subclassfeature15" : {
 			name : "The Best Defense",
-			source : ["LH:OoS", 1],
 			minlevel : 15,
 			description : desc([
 				"Starting at 15th level you learn to transiton from your defensive guard to offensive strikes.",
@@ -88,10 +87,9 @@ AddSubClass("paladin", "oath of steel", {
 			description : desc([
 				"at 20th level, you learn to merge with your weapon, and gain these benefits:",
 				" - You Cannot be Disarmed",
-				" - You can add your Charisma modifier to your Armour Class"
-       				" - When you take the Attack action on your turn, You can take an Attack action as a Bonus Action"
+				" - You can add your Charisma modifier to your Armour Class",
+       	" - When you take the Attack action on your turn, You can take an Attack action as a Bonus Action"
 			]),
-			}],
 			recovery : "long rest",
 			usages : 1,
 			action : ["action", ""]
